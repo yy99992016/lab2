@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+ 
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.5//EN"
+     "http://struts.apache.org/dtds/struts-2.5.dtd">
+ 
+ <!-- START SNIPPET: xworkSample -->
+ <struts>
+
+    <package name="com.info.action" extends="struts-default">
+        <action name="jump1" class="com.info.action.BookAction" method="dir_query">     
+        <result name="Success">/WEB-INF/query.jsp</result>
+         </action>
+        <action name="jump2" class="com.info.action.BookAction" method="dir_insert">     
+        <result name="Success">/WEB-INF/insert.jsp</result>
+         </action>
+          <action name="jump4" class="com.info.action.BookAction" method="dir_author">     
+        <result name="Success">/WEB-INF/allauthor.jsp</result>
+         </action>
+        <action name="query" class="com.info.action.BookAction" method="Query">     
+        <result name="Success">/WEB-INF/booklist.jsp</result>
+        <result name="NoAuthor">/WEB-INF/noauthor.jsp</result>
+        <result name="NoBook">/WEB-INF/nobook.jsp</result>
+         </action>
+        <action name="allauthor" class="com.info.action.BookAction" method="AuthorList">     
+        <result name="authorlist">/WEB-INF/allauthor.jsp</result>
+        <result name="noauthor">/WEB-INF/no1author.jsp</result>
+         </action>
+        <action name="delete" class="com.info.action.BookAction" method="Delete">     
+        <result name="deletesuccess">/WEB-INF/deletesuccess.jsp</result>
+         </action>
+        <action name="detail" class="com.info.action.BookAction" method="execute">     
+        <result name="detail">/WEB-INF/detail.jsp</result>
+         </action>
+         <action name="update" class="com.info.action.BookAction" method="Update">     
+        <result name="updatesuccess">/WEB-INF/updatesuccess.jsp</result>
+        <result name="insertauthor">/WEB-INF/insertauthor.jsp</result>
+        <result name="nobook">/WEB-INF/no1book.jsp</result>
+         </action>
+        <action name="insert" class="com.info.action.BookAction" method="Insert">     
+        <result name="insertsuccess">/WEB-INF/insertsuccess.jsp</result>
+        <result name="insertauthor1">/WEB-INF/inserta.jsp</result>
+        <result name="occupy">/WEB-INF/occupy.jsp</result>
+         </action>
+ 		<action name="insertauthor" class="com.info.action.BookAction" method="InsertAuthor">     
+        <result name="insertauthorsuccess">/WEB-INF/insertauthorsuccess.jsp</result>
+        <result name="occupy">/WEB-INF/occupy.jsp</result>
+         </action>
+        <action name="insertauthor1" class="com.info.action.BookAction" method="InsertAuthor1">     
+        <result name="insertauthor1success">/WEB-INF/insertsuccess.jsp</result>
+        <result name="occupy">/WEB-INF/occupy.jsp</result>
+         </action>
+     </package>
+
+ 
+ </struts>
+<!-- END SNIPPET: xworkSample -->
